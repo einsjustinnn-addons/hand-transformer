@@ -1,4 +1,4 @@
-rootProject.name = "hand-transformer"
+rootProject.name = "hand_transformer"
 
 pluginManagement {
     val labyGradlePluginVersion = "0.4.6"

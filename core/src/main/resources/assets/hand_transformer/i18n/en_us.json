@@ -1,0 +1,12 @@
+{
+  "hand_transformer": {
+    "settings": {
+      "enabled": {
+        "name": "Enabled"
+      },
+      "itemSize": {
+        "name": "Change Item Size"
+      }
+    }
+  }
+}
