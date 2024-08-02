@@ -1,8 +1,9 @@
 package de.einsjustin.handtransformer;
 
-import de.einsjustin.handtransformer.listeners.ItemInHandRenderListener;
+import de.einsjustin.handtransformer.configuration.HandTransformerConfiguration;
+import de.einsjustin.handtransformer.listener.ItemInHandRenderListener;
+import de.einsjustin.handtransformer.listener.RenderHandListener;
 import net.labymod.api.addon.LabyAddon;
-import net.labymod.api.event.client.render.RenderHandEvent;
 import net.labymod.api.models.addon.annotation.AddonMain;
 
 @AddonMain
@@ -13,6 +14,7 @@ public class HandTransformerAddon extends LabyAddon<HandTransformerConfiguration
     this.registerSettingCategory();
 
     this.registerListener(new ItemInHandRenderListener(this));
+    this.registerListener(new RenderHandListener(this));
   }
 
   @Override

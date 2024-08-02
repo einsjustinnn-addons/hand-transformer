@@ -1,40 +1,46 @@
 {
   "hand_transformer": {
     "settings": {
-      "header":{
-        "item":{
-          "name": "Item Settings"
+      "header": {
+        "settings": {
+          "name": "Settings"
         },
         "hand": {
           "name": "Hand Settings"
         }
       },
+      "itemSettings": {
+        "name": "Item Settings",
+        "itemSize": {
+          "name": "Change Item Size"
+        },
+        "itemX": {
+          "name": "Item X"
+        },
+        "itemY": {
+          "name": "Item Y"
+        },
+        "itemZ": {
+          "name": "Item Z"
+        }
+      },
+      "handSettings": {
+        "name": "Hand Settings",
+        "handSize": {
+          "name": "Change Hand Size"
+        },
+        "handX": {
+          "name": "Hand X"
+        },
+        "handY": {
+          "name": "Hand Y"
+        },
+        "handZ": {
+          "name": "Hand Z"
+        }
+      },
       "enabled": {
         "name": "Enabled"
-      },
-      "itemSize": {
-        "name": "Change Item Size"
-      },
-      "itemX": {
-        "name": "Item X"
-      },
-      "itemY": {
-        "name": "Item Y"
-      },
-      "itemZ": {
-        "name": "Item Z"
-      },
-      "handSize": {
-        "name": "Change Hand Size"
-      },
-      "handX": {
-        "name": "Hand X"
-      },
-      "handY": {
-        "name": "Hand Y"
-      },
-      "handZ": {
-        "name": "Hand Z"
       }
     }
   }
