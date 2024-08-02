@@ -2,6 +2,7 @@ package de.einsjustin.handtransformer;
 
 import de.einsjustin.handtransformer.listeners.ItemInHandRenderListener;
 import net.labymod.api.addon.LabyAddon;
+import net.labymod.api.event.client.render.RenderHandEvent;
 import net.labymod.api.models.addon.annotation.AddonMain;
 
 @AddonMain
