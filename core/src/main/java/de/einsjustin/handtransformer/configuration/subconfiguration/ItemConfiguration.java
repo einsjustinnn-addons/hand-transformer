@@ -21,15 +21,15 @@ public class ItemConfiguration extends Config {
 
   @SpriteSlot(size = 32, x = 1)
   @SliderSetting(min = -0.5F, max = 0.5F, steps = 0.1F)
-  private final ConfigProperty<Float> itemX = new ConfigProperty<>(1.0F);
+  private final ConfigProperty<Float> itemX = new ConfigProperty<>(0.0F);
 
   @SpriteSlot(size = 32, x = 2)
   @SliderSetting(min = -0.5F, max = 0.5F, steps = 0.1F)
-  private final ConfigProperty<Float> itemY = new ConfigProperty<>(1.0F);
+  private final ConfigProperty<Float> itemY = new ConfigProperty<>(0.0F);
 
   @SpriteSlot(size = 32, x = 3)
   @SliderSetting(min = -0.5F, max = 0.5F, steps = 0.1F)
-  private final ConfigProperty<Float> itemZ = new ConfigProperty<>(1.0F);
+  private final ConfigProperty<Float> itemZ = new ConfigProperty<>(0.0F);
 
   public ConfigProperty<Float> itemZ() {
     return itemZ;
