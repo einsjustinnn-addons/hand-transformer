@@ -2,6 +2,8 @@ package de.einsjustin.handtransformer.listener;
 
 import de.einsjustin.handtransformer.HandTransformerAddon;
 import de.einsjustin.handtransformer.event.ItemInHandRenderEvent;
+import net.labymod.api.Laby;
+import net.labymod.api.client.entity.player.ClientPlayer;
 import net.labymod.api.client.render.model.ModelTransformType;
 import net.labymod.api.event.Phase;
 import net.labymod.api.event.Subscribe;
@@ -25,12 +27,22 @@ public class ItemInHandRenderListener {
 
     if (!itemConfiguration.enabled().get()) return;
 
+    var stack = event.stack();
+
     float size = itemConfiguration.itemSize().get();
+
+    ClientPlayer clientPlayer = Laby.labyAPI().minecraft().getClientPlayer();
+    assert clientPlayer != null;
+    boolean handActive = clientPlayer.isHandActive();
+
+    if (handActive) {
+      stack.scale(size);
+      return;
+    }
+
     float itemX = itemConfiguration.itemX().get();
     float itemY = itemConfiguration.itemY().get();
     float itemZ = itemConfiguration.itemZ().get();
-
-    var stack = event.stack();
 
     stack.translate(itemX, itemY, itemZ);
     stack.scale(size);
