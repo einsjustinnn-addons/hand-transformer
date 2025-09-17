@@ -1,3 +1,5 @@
+import net.labymod.labygradle.common.extension.model.labymod.ReleaseChannel
+
 plugins {
     id("net.labymod.labygradle")
     id("net.labymod.labygradle.addon")
@@ -27,7 +29,7 @@ labyMod {
         displayName = "Hand Transformer"
         author = "EinsJustin"
         description = "You can transform your hand and change the size of the item in your hand"
-        minecraftVersion = "1.8<1.21.5"
+        minecraftVersion = "1.8<1.21.8"
         version = rootProject.version.toString()
     }
 }
