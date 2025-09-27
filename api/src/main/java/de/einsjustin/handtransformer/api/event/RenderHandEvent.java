@@ -1,4 +1,4 @@
-package de.einsjustin.handtransformer.event;
+package de.einsjustin.handtransformer.api.event;
 
 import net.labymod.api.client.entity.LivingEntity.HandSide;
 import net.labymod.api.client.render.matrix.Stack;

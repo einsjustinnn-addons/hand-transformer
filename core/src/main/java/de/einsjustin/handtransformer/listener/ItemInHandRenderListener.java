@@ -1,7 +1,7 @@
 package de.einsjustin.handtransformer.listener;
 
 import de.einsjustin.handtransformer.HandTransformerAddon;
-import de.einsjustin.handtransformer.event.ItemInHandRenderEvent;
+import de.einsjustin.handtransformer.api.event.ItemInHandRenderEvent;
 import net.labymod.api.Laby;
 import net.labymod.api.client.entity.player.ClientPlayer;
 import net.labymod.api.client.render.model.ModelTransformType;

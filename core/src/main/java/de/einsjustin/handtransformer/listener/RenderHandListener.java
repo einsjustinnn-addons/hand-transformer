@@ -1,7 +1,7 @@
 package de.einsjustin.handtransformer.listener;
 
 import de.einsjustin.handtransformer.HandTransformerAddon;
-import de.einsjustin.handtransformer.event.RenderHandEvent;
+import de.einsjustin.handtransformer.api.event.RenderHandEvent;
 import net.labymod.api.event.Phase;
 import net.labymod.api.event.Subscribe;
 
