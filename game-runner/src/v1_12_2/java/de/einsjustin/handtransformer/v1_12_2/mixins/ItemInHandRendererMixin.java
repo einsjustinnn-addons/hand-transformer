@@ -1,7 +1,7 @@
 package de.einsjustin.handtransformer.v1_12_2.mixins;
 
-import de.einsjustin.handtransformer.event.ItemInHandRenderEvent;
-import de.einsjustin.handtransformer.event.RenderHandEvent;
+import de.einsjustin.handtransformer.api.event.ItemInHandRenderEvent;
+import de.einsjustin.handtransformer.api.event.RenderHandEvent;
 import net.labymod.api.Laby;
 import net.labymod.api.client.entity.LivingEntity;
 import net.labymod.api.client.entity.LivingEntity.HandSide;
