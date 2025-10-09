@@ -5,22 +5,21 @@ import de.einsjustin.handtransformer.api.event.RenderHandEvent;
 import net.labymod.api.event.Phase;
 import net.labymod.api.event.Subscribe;
 
-public class RenderHandListener {
+public record RenderHandListener(HandTransformerAddon addon) {
 
-  private final HandTransformerAddon addon;
-
-  public RenderHandListener(HandTransformerAddon addon) {
-    this.addon = addon;
-  }
-
+  @SuppressWarnings("unused")
   @Subscribe
   public void onRenderHand(RenderHandEvent event) {
-    if (event.phase() != Phase.PRE) return;
+    if (event.phase() != Phase.PRE) {
+      return;
+    }
 
     var configuration = this.addon.configuration();
     var handConfiguration = configuration.handSettings();
 
-    if (!handConfiguration.enabled().get()) return;
+    if (!handConfiguration.enabled().get()) {
+      return;
+    }
 
     float size = handConfiguration.handSize().get();
     float handX = handConfiguration.handX().get();
