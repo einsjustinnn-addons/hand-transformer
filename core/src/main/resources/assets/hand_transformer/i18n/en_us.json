@@ -11,6 +11,7 @@
       },
       "itemSettings": {
         "name": "Item Settings",
+        "description": "You can change the size of the item in your hand.",
         "itemSize": {
           "name": "Change Item Size"
         },
@@ -26,6 +27,7 @@
       },
       "handSettings": {
         "name": "Hand Settings",
+        "description": "You can change the size of your hand.",
         "handSize": {
           "name": "Change Hand Size"
         },
