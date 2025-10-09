@@ -2,40 +2,41 @@ package de.einsjustin.handtransformer.listener;
 
 import de.einsjustin.handtransformer.HandTransformerAddon;
 import de.einsjustin.handtransformer.api.event.ItemInHandRenderEvent;
-import net.labymod.api.Laby;
 import net.labymod.api.client.entity.player.ClientPlayer;
 import net.labymod.api.client.render.model.ModelTransformType;
 import net.labymod.api.event.Phase;
 import net.labymod.api.event.Subscribe;
 
-public class ItemInHandRenderListener {
+public record ItemInHandRenderListener(HandTransformerAddon addon) {
 
-  private final HandTransformerAddon addon;
-
-  public ItemInHandRenderListener(HandTransformerAddon addon) {
-    this.addon = addon;
-  }
-
+  @SuppressWarnings("unused")
   @Subscribe
   public void onItemInHandRender(ItemInHandRenderEvent event) {
-    if (event.phase() != Phase.PRE) return;
+    if (event.phase() != Phase.PRE) {
+      return;
+    }
     var type = event.type();
-    if (!(type == ModelTransformType.FIRST_PERSON_RIGHT_HAND || type == ModelTransformType.FIRST_PERSON_LEFT_HAND)) return;
+    if (!(type == ModelTransformType.FIRST_PERSON_RIGHT_HAND
+        || type == ModelTransformType.FIRST_PERSON_LEFT_HAND)) {
+      return;
+    }
 
     var configuration = this.addon.configuration();
     var itemConfiguration = configuration.itemSettings();
 
-    if (!itemConfiguration.enabled().get()) return;
+    if (!itemConfiguration.enabled().get()) {
+      return;
+    }
 
     var stack = event.stack();
 
     float size = itemConfiguration.itemSize().get();
 
-    ClientPlayer clientPlayer = Laby.labyAPI().minecraft().getClientPlayer();
+    ClientPlayer clientPlayer = this.addon.labyAPI().minecraft().getClientPlayer();
     assert clientPlayer != null;
-    boolean handActive = clientPlayer.isHandActive();
+    boolean isHandActive = clientPlayer.isHandActive();
 
-    if (handActive) {
+    if (isHandActive) {
       stack.scale(size);
       return;
     }
