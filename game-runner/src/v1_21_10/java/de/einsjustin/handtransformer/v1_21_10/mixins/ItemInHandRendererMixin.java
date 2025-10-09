@@ -1,4 +1,4 @@
-package de.einsjustin.handtransformer.v1_21_9.mixins;
+package de.einsjustin.handtransformer.v1_21_10.mixins;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -9,7 +9,7 @@ import net.labymod.api.client.entity.LivingEntity.HandSide;
 import net.labymod.api.client.render.matrix.Stack;
 import net.labymod.api.client.render.matrix.VanillaStackAccessor;
 import net.labymod.api.event.Phase;
-import net.labymod.v1_21_9.client.util.MinecraftUtil;
+import net.labymod.v1_21_10.client.util.MinecraftUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
