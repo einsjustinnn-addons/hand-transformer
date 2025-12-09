@@ -27,7 +27,7 @@ labyMod {
         displayName = "Hand Transformer"
         author = "EinsJustin"
         description = "You can transform your hand and change the size of the item in your hand"
-        minecraftVersion = "1.8<1.21.10"
+        minecraftVersion = "1.8<1.21.11"
         version = rootProject.version.toString()
     }
 }
