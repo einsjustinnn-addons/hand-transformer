@@ -1,5 +1,6 @@
 package de.einsjustin.handtransformer.v1_20_4.mixins;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.mojang.blaze3d.vertex.PoseStack;
 import de.einsjustin.handtransformer.api.event.ItemInHandRenderEvent;
 import de.einsjustin.handtransformer.api.event.RenderHandEvent;
@@ -80,6 +81,19 @@ public abstract class ItemInHandRendererMixin {
     var renderer = (PlayerRenderer) this.entityRenderDispatcher.getRenderer(abstractClientPlayer);
     renderer.renderLeftHand(poseStack, multiBufferSource, i0, abstractClientPlayer);
     this.hand_transformer$fireRenderHandEvent(Phase.POST, HandSide.LEFT);
+  }
+
+  @ModifyExpressionValue(
+      method = "tick",
+      at = @At(
+          value = "INVOKE",
+          target = "Lnet/minecraft/client/player/LocalPlayer;getAttackStrengthScale(F)F"
+      )
+  )
+  public float hand_transformer$tick(
+      float original
+  ) {
+    return 1f;
   }
 
   @Unique
