@@ -45,7 +45,10 @@ public record ItemInHandRenderListener(HandTransformerAddon addon) {
     float itemY = itemConfiguration.itemY().get();
     float itemZ = itemConfiguration.itemZ().get();
 
-    stack.translate(itemX, itemY, itemZ);
+    itemX = (itemConfiguration.negateItemXInOffhand().get() && type == ModelTransformType.FIRST_PERSON_LEFT_HAND) ?
+        -itemX : itemX;
+
+    stack.translate((type == ModelTransformType.FIRST_PERSON_LEFT_HAND) ? -itemX : itemX, itemY, itemZ);
     stack.scale(size);
   }
 }

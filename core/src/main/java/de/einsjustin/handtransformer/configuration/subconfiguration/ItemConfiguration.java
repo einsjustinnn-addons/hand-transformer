@@ -31,6 +31,9 @@ public class ItemConfiguration extends Config {
   @SliderSetting(min = -1F, max = 1F, steps = 0.05F)
   private final ConfigProperty<Float> itemZ = new ConfigProperty<>(0.0F);
 
+  @SwitchSetting
+  private final ConfigProperty<Boolean> negateItemXInOffhand = new ConfigProperty<>(false);
+
   public ConfigProperty<Float> itemZ() {
     return itemZ;
   }
@@ -45,6 +48,10 @@ public class ItemConfiguration extends Config {
 
   public ConfigProperty<Float> itemSize() {
     return itemSize;
+  }
+
+  public ConfigProperty<Boolean> negateItemXInOffhand() {
+    return negateItemXInOffhand;
   }
 
   public ConfigProperty<Boolean> enabled() {
