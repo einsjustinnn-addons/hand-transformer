@@ -23,6 +23,10 @@
         },
         "itemZ": {
           "name": "Item Z"
+        },
+        "negateItemXInOffhand": {
+          "name": "Negate Item X in Offhand",
+          "description": "If enabled, the item X will be negated in the offhand."
         }
       },
       "handSettings": {
@@ -39,6 +43,13 @@
         },
         "handZ": {
           "name": "Hand Z"
+        }
+      },
+      "swingSettings": {
+        "name": "Swing Animation Settings",
+        "description": "You can change the swing animation speed.",
+        "swingDurationTicks": {
+          "name": "Animation Duration (Ticks)"
         }
       },
       "enabled": {

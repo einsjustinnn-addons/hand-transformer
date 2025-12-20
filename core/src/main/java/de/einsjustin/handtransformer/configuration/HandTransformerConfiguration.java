@@ -2,6 +2,7 @@ package de.einsjustin.handtransformer.configuration;
 
 import de.einsjustin.handtransformer.configuration.subconfiguration.HandConfiguration;
 import de.einsjustin.handtransformer.configuration.subconfiguration.ItemConfiguration;
+import de.einsjustin.handtransformer.configuration.subconfiguration.SwingConfiguration;
 import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
@@ -23,6 +24,8 @@ public class HandTransformerConfiguration extends AddonConfig {
 
   private final HandConfiguration handSettings = new HandConfiguration();
 
+  private final SwingConfiguration swingSettings = new SwingConfiguration();
+
   @Override
   public ConfigProperty<Boolean> enabled() {
     return this.enabled;
@@ -35,4 +38,9 @@ public class HandTransformerConfiguration extends AddonConfig {
   public HandConfiguration handSettings() {
     return handSettings;
   }
+
+  public SwingConfiguration swingSettings() {
+    return swingSettings;
+  }
+
 }
