@@ -6,6 +6,7 @@ import de.einsjustin.handtransformer.configuration.subconfiguration.SwingConfigu
 import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
+import net.labymod.api.configuration.loader.annotation.IntroducedIn;
 import net.labymod.api.configuration.loader.annotation.SpriteSlot;
 import net.labymod.api.configuration.loader.annotation.SpriteTexture;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
@@ -24,6 +25,7 @@ public class HandTransformerConfiguration extends AddonConfig {
 
   private final HandConfiguration handSettings = new HandConfiguration();
 
+  @IntroducedIn(namespace = "hand_transformer", value = "1.1")
   private final SwingConfiguration swingSettings = new SwingConfiguration();
 
   @Override
