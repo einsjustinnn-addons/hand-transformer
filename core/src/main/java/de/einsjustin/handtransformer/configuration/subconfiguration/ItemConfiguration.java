@@ -16,20 +16,23 @@ public class ItemConfiguration extends Config {
   @SwitchSetting
   private final ConfigProperty<Boolean> enabled = new ConfigProperty<>(true);
 
-  @SliderSetting(min = 0.5F, max = 1.5F, steps = 0.1F)
+  @SliderSetting(min = 0.05F, max = 2F, steps = 0.05F)
   private final ConfigProperty<Float> itemSize = new ConfigProperty<>(1.0F);
 
   @SpriteSlot(size = 32, x = 1)
-  @SliderSetting(min = -0.5F, max = 0.5F, steps = 0.1F)
+  @SliderSetting(min = -1F, max = 1F, steps = 0.05F)
   private final ConfigProperty<Float> itemX = new ConfigProperty<>(0.0F);
 
   @SpriteSlot(size = 32, x = 2)
-  @SliderSetting(min = -0.5F, max = 0.5F, steps = 0.1F)
+  @SliderSetting(min = -1F, max = 1F, steps = 0.05F)
   private final ConfigProperty<Float> itemY = new ConfigProperty<>(0.0F);
 
   @SpriteSlot(size = 32, x = 3)
-  @SliderSetting(min = -0.5F, max = 0.5F, steps = 0.1F)
+  @SliderSetting(min = -1F, max = 1F, steps = 0.05F)
   private final ConfigProperty<Float> itemZ = new ConfigProperty<>(0.0F);
+
+  @SwitchSetting
+  private final ConfigProperty<Boolean> negateItemXInOffhand = new ConfigProperty<>(false);
 
   public ConfigProperty<Float> itemZ() {
     return itemZ;
@@ -45,6 +48,10 @@ public class ItemConfiguration extends Config {
 
   public ConfigProperty<Float> itemSize() {
     return itemSize;
+  }
+
+  public ConfigProperty<Boolean> negateItemXInOffhand() {
+    return negateItemXInOffhand;
   }
 
   public ConfigProperty<Boolean> enabled() {
