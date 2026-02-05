@@ -13,11 +13,10 @@ public record HandSwingListener(HandTransformerAddon addon) {
     var configuration = this.addon.configuration();
     var swingConfiguration = configuration.swingSettings();
 
-    if (!swingConfiguration.enabled.get()) {
+    if (!swingConfiguration.enabled().get() || !configuration.enabled().get()) {
       return;
     }
 
     event.setAnimationDuration(swingConfiguration.swingDurationTicks().get());
-
   }
 }

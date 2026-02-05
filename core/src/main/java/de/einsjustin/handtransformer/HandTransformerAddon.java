@@ -13,8 +13,12 @@ import net.labymod.api.util.version.SemanticVersion;
 @AddonMain
 public class HandTransformerAddon extends LabyAddon<HandTransformerConfiguration> {
 
+  // Temporary
+  public static HandTransformerAddon INSTANCE;
+
   @Override
   protected void enable() {
+    INSTANCE = this;
     this.registerSettingCategory();
 
     this.registerListener(new ItemInHandRenderListener(this));
