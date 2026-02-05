@@ -14,13 +14,17 @@ public class SwingConfiguration extends Config {
   @SpriteSlot(size = 32)
   @ShowSettingInParent
   @SwitchSetting
-  public final ConfigProperty<Boolean> enabled = new ConfigProperty<>(true);
+  private final ConfigProperty<Boolean> enabled = new ConfigProperty<>(true);
 
   @SliderSetting(min = 1, max = 20, steps = 1)
   private final ConfigProperty<Integer> swingDurationTicks = new ConfigProperty<>(6);
 
   public ConfigProperty<Integer> swingDurationTicks() {
     return swingDurationTicks;
+  }
+
+  public ConfigProperty<Boolean> enabled() {
+    return enabled;
   }
 
 }

@@ -1,5 +1,6 @@
 package de.einsjustin.handtransformer.v1_21_4.mixins;
 
+import de.einsjustin.handtransformer.HandTransformerAddon;
 import de.einsjustin.handtransformer.api.event.HandSwingEvent;
 import net.labymod.api.Laby;
 import net.minecraft.client.player.LocalPlayer;
@@ -45,6 +46,7 @@ public class LocalPlayerMixin {
       InteractionHand hand,
       CallbackInfo callbackInfo
   ) {
+    if (!HandTransformerAddon.INSTANCE.configuration().enabled().get() || !HandTransformerAddon.INSTANCE.configuration().swingSettings().enabled().get()) return;
     if (this.hand_transformer$animTicks == 0)
       this.hand_transformer$animTicks = 1;
   }
