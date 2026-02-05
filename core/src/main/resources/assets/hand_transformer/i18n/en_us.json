@@ -49,7 +49,7 @@
         "name": "Swing Animation Settings",
         "description": "You can change the swing animation speed.",
         "swingDurationTicks": {
-          "name": "Animation Duration (Ticks)"
+          "name": "Animation Duration (Ticks) default: 6"
         }
       },
       "enabled": {
