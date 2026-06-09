@@ -1,11 +1,11 @@
 rootProject.name = "hand_transformer"
 
 pluginManagement {
-    val labyGradlePluginVersion = "0.5.9"
+    val labyGradlePluginVersion = "0.8.1"
 
     buildscript {
         repositories {
-            maven("https://dist.labymod.net/api/v1/maven/release/")
+            maven("https://maven.laby.net/api/v1/maven/release/")
             maven("https://maven.neoforged.net/releases/")
             maven("https://maven.fabricmc.net/")
             gradlePluginPortal()
