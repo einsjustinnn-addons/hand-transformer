@@ -29,11 +29,6 @@ labyMod {
         description = "You can transform your hand and change the size of the item in your hand"
         minecraftVersion = "1.8<1.21.11"
         version = rootProject.version.toString()
-
-        extensions.findByType(JavaPluginExtension::class.java)?.apply {
-            sourceCompatibility = JavaVersion.VERSION_21
-            targetCompatibility = JavaVersion.VERSION_21
-        }
     }
 }
 
@@ -43,4 +38,9 @@ subprojects {
 
     group = rootProject.group
     version = rootProject.version
+
+    extensions.findByType(JavaPluginExtension::class.java)?.apply {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
 }
