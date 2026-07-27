@@ -1,7 +1,7 @@
 rootProject.name = "hand_transformer"
 
 pluginManagement {
-    val labyGradlePluginVersion = "0.8.1"
+    val labyGradlePluginVersion = "0.8.2"
 
     buildscript {
         repositories {
