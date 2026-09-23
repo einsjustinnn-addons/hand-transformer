@@ -6,7 +6,7 @@ plugins {
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 
 group = "org.example"
-version = System.getenv().getOrDefault("VERSION", "1.1.0")
+version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
 
 labyMod {
     defaultPackageName = "de.einsjustin.handtransformer" // change this to your main package name (used by all modules)
